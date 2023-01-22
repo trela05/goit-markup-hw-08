@@ -1,0 +1,156 @@
+.header {
+	background-color: $white-color;
+	padding: 10px 0;
+	border-bottom: 1px solid $border-color;
+	padding: 16px 0 16px;
+
+	@include tablet {
+		padding: 20px 0 20px;
+	}
+	@include desktop {
+		padding: 24px 0 25px;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__hamburger {
+		background-color: transparent;
+		cursor: pointer;
+		border: none;
+		outline: none;
+
+		&:is(:hover, :focus) {
+			color: $primary-color;
+		}
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		gap: 93px;
+	}
+	&__nav-list {
+		display: none;
+		list-style: none;
+		gap: 46px;
+		position: relative;
+
+		@include tablet {
+			display: flex;
+		}
+	}
+
+	&__nav-item {
+		color: $dark-grey;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 1.17;
+		letter-spacing: 0.02em;
+		text-align: left;
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		text-decoration: none;
+
+		&:is(:hover, :focus) {
+			color: $primary-color;
+
+			&::after {
+				content: "";
+				display: flex;
+				justify-content: center;
+				position: absolute;
+				background-color: $primary-color;
+				width: 53px;
+				height: 4px;
+				top: 46px;
+				border-radius: 2px;
+			}
+		}
+
+		&--active {
+			color: $primary-color;
+
+			&::after {
+				background-color: $primary-color;
+				content: "";
+				display: flex;
+				justify-content: center;
+				position: absolute;
+				width: 53px;
+				height: 4px;
+				top: 46px;
+				border-radius: 2px;
+			}
+		}
+	}
+
+	&__contact-list {
+		display: none;
+
+		@include tablet {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			font-weight: 500;
+			font-size: 12px;
+		}
+
+		@include desktop {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 50px;
+			font-size: 14px;
+		}
+	}
+
+	&__contact-item {
+		letter-spacing: 0.02em;
+		line-height: 1.16;
+		color: $light-grey;
+		text-decoration: none;
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+		@include tablet {
+			display: inline-block;
+			width: 100%;
+			text-align: left;
+		}
+
+		&:is(:hover, :focus) {
+			color: $primary-color;
+		}
+	}
+
+	&__icon {
+		margin-right: 10px;
+		--color3: currentColor;
+		--color6: currentColor;
+
+		&--mail {
+			width: 14px;
+			height: 10px;
+
+			@include desktop {
+				width: 16px;
+				height: 12px;
+			}
+		}
+
+		&--phone {
+			width: 10px;
+			height: 14px;
+
+			@include desktop {
+				height: 16px;
+			}
+		}
+	}
+}

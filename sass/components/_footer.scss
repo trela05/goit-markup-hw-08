@@ -1,0 +1,215 @@
+.footer {
+	background-color: $navy-blue;
+	padding: 60px 0;
+
+	&__flex {
+		display: inline-flex;
+		justify-content: center;
+		flex-direction: column;
+		width: 100%;
+
+		@include desktop {
+			flex-direction: row;
+			justify-content: start;
+		}
+	}
+
+	&__address-list {
+		color: rgba(255, 255, 255, 0.6);
+		font-size: 14px;
+		line-height: 1.71;
+		font-style: normal;
+		text-decoration: none;
+		margin-top: 20px;
+		text-align: center;
+
+		@include desktop {
+			text-align: left;
+		}
+	}
+
+	&__address-flex {
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+		padding-left: 0;
+		gap: 9px;
+
+		@include desktop {
+			gap: 8px;
+		}
+	}
+
+	&__address {
+		color: $white-color;
+		font-size: 14px;
+		line-height: 1.71;
+		font-style: normal;
+		padding-top: 20px;
+	}
+
+	&__contact {
+		text-decoration: none;
+		color: rgba(255, 255, 255, 0.6);
+		font-style: normal;
+		font-size: 14px;
+		line-height: 1.71;
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+		&--underline {
+			text-decoration: underline;
+		}
+
+		&:is(:hover, :focus) {
+			color: $primary-color;
+		}
+	}
+
+	&__tablet-flex {
+		@include tablet {
+			display: flex;
+			justify-content: space-around;
+		}
+	}
+
+	&__newsletter {
+		@include desktop {
+			margin-left: 78px;
+			flex-grow: 1;
+		}
+	}
+
+	&__newsletter-title {
+		color: $white-color;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.17;
+		letter-spacing: 0.03em;
+		margin-top: 60px;
+		margin-bottom: 20px;
+		text-align: center;
+
+		@include desktop {
+			margin-top: 11px;
+			text-align: left;
+		}
+	}
+
+	&__newsletter-flex {
+		display: flex;
+		flex-direction: column;
+
+		@include desktop {
+			flex-direction: row;
+		}
+	}
+
+	&__newsletter-form {
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		border-radius: 4px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+		background-color: $black-rock;
+		padding: 15px 16px;
+		height: 50px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.25;
+		letter-spacing: 0.03em;
+		outline: transparent;
+		color: $white-color;
+		max-width: 450px;
+		width: 100%;
+
+		@include tablet {
+			margin: 0 auto;
+		}
+
+		@include desktop {
+			max-width: 358px;
+		}
+	}
+
+	&__newsletter-btn {
+		background-color: $primary-color;
+		color: $white-color;
+		width: 200px;
+		height: 50px;
+		padding: 10px 18px 10px 42px;
+		border-radius: 4px;
+		border: none;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.875;
+		letter-spacing: 0.06em;
+		display: flex;
+		gap: 24px;
+		align-items: center;
+		margin: 20px auto 0;
+		white-space: nowrap;
+		cursor: pointer;
+
+		@include desktop {
+			margin-top: 0;
+			margin-left: 12px;
+		}
+	}
+
+	&__icon {
+		fill: $white-color;
+	}
+
+	&__join-us {
+		text-align: center;
+		margin-top: 60px;
+
+		@include tablet {
+			margin-top: 5px;
+		}
+
+		@include desktop {
+			margin-top: 12px;
+			margin-left: 70px;
+		}
+	}
+
+	&__join-us-flex {
+		list-style: none;
+		display: inline-flex;
+		justify-content: center;
+		gap: 10px;
+		padding-top: 20px;
+	}
+
+	&__join-us-title {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.17;
+		letter-spacing: 0.03em;
+
+		@include desktop {
+			text-align: left;
+		}
+
+		&--color {
+			color: $white-color;
+		}
+	}
+	&__social-icons {
+		fill: $white-color;
+		background-color: rgba(255, 255, 255, 0.1);
+		border-radius: 50%;
+		cursor: pointer;
+		padding: 12px;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:hover,
+		&:focus {
+			fill: $white-color;
+			background-color: $primary-color;
+		}
+	}
+}

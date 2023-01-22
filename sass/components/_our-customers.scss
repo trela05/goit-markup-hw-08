@@ -1,0 +1,50 @@
+.our-customers {
+	&__name {
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 1.17;
+		color: $dark-grey;
+		text-align: center;
+		margin-bottom: 30px;
+
+		@include desktop {
+			font-size: 36px;
+			margin-bottom: 50px;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		justify-content: center;
+		gap: 30px;
+		list-style: none;
+		cursor: pointer;
+		flex-wrap: wrap;
+	}
+
+	&__company {
+		border: 1px solid $icon-color;
+		border-radius: 4px;
+		fill: $icon-color;
+		padding: 16px 0;
+		display: flex;
+		justify-content: center;
+		outline: none;
+		transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+			border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		max-width: 210px;
+		width: 100%;
+
+		@include tablet {
+			max-width: 226px;
+		}
+		@include desktop {
+			max-width: 170px;
+		}
+
+		&:is(:hover, :focus) {
+			fill: $primary-color;
+			border-color: $primary-color;
+		}
+	}
+}

@@ -1,0 +1,55 @@
+.our-atuts {
+	&__info {
+		max-width: 450px;
+
+		@include tablet {
+			max-width: 354px;
+		}
+		@include desktop {
+			max-width: 270px;
+		}
+	}
+	&__flex {
+		display: flex;
+		align-items: center;
+		list-style: none;
+		gap: 30px;
+		flex-direction: column;
+
+		@include tablet {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		@include desktop {
+			flex-direction: row;
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.17;
+		color: $dark-grey;
+		letter-spacing: 0.03em;
+		text-align: left;
+	}
+	&__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.71;
+		color: $light-grey;
+		letter-spacing: 0.03em;
+		padding-top: 10px;
+		text-align: left;
+	}
+	&__icon {
+		padding: 25px 0;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 30px;
+		background-color: $beige;
+		border-radius: 4px;
+	}
+}

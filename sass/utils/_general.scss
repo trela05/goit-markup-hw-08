@@ -1,0 +1,58 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+img,
+svg {
+	vertical-align: middle;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+ul {
+	list-style: none;
+}
+
+.section {
+	padding: 60px 0;
+
+	@include desktop {
+		padding: 94px 0;
+	}
+}
+
+.container {
+	max-width: 480px;
+	margin: 0 auto;
+	padding: 0 15px;
+	text-align: center;
+
+	@include tablet {
+		max-width: 768px;
+	}
+
+	@include desktop {
+		max-width: 1200px;
+	}
+}
